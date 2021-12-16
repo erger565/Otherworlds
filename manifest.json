@@ -1,6 +1,6 @@
 {
-  "name": "Slime-Sweep",
-  "short_name": "Slime-Sweep",
+  "name": "Otherworlds",
+  "short_name": "Otherworlds",
   "icons": [{
     "src": "1.png",
       "sizes": "128x128",
@@ -33,7 +33,7 @@
       "purpose": "any maskable"
     }],
   "lang": "en-US",
-  "start_url": "https://Slime-Sweep.hghg81.repl.co",
+  "start_url": "https://erger565.github.io/",
   "display": "fullscreen",
   "background_color": "white",
   "theme_color": "white"
