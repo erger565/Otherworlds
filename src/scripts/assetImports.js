@@ -40,6 +40,7 @@ import world2TinyWeakPlatform from '../assets/world2TinyWeakPlatform.png'
 
 import idleFrame from '../assets/idleFrame.png'
 import idleFrame2 from '../assets/idleFrame2.png'
+import idleframe3 from '../assets/hero-DEN-2019.png'
 
 import BG from '../assets/mainpage_bg.png'
 import tabIcon from '../assets/tabIcon.png'
