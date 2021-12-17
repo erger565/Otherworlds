@@ -34,7 +34,6 @@
     }],
   "lang": "en-US",
   "start_url": "https://erger565.github.io/",
-  "display": "fullscreen",
   "background_color": "white",
   "theme_color": "white",
   "display": "standalone"
