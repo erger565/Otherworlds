@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 1080px;
+  width: device-width;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
