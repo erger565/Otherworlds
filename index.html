@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    if (navigator.serviceWorker.controller) {
-        console.log("Active service worker found");
-        } else {
-            navigator.serviceWorker
-            .register("serviceWorker.js", {
-            scope: "./"
-            })
-            .then(function (reg) {
-            console.log("Service worker  registered);
-            });
-        }
-    }
     <meta name="theme-color" content="#317EFB"/>
     <link rel="apple-touch-icon" href="./1.png">
     <meta name="apple-desktop-web-app-capable" content="yes">
