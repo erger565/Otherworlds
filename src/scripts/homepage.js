@@ -25,6 +25,8 @@ export default class HomePage {
         this.worldBGs = [
             'dist/images/mainpage_bg.png',
             'dist/images/world2BG.png',
+            'dist/images/hero-DEN-2019.png',
+',
         ]
 
         // get current number of levels completed
