@@ -771,6 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_musicOff_png__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../assets/musicOff.png */ "./src/assets/musicOff.png");
 /* harmony import */ var _assets_soundOn_png__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../assets/soundOn.png */ "./src/assets/soundOn.png");
 /* harmony import */ var _assets_soundOff_png__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../assets/soundOff.png */ "./src/assets/soundOff.png");
+  /* harmony import */ var _assets_world2BG_png__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../assets/hero-DEN-2019.png */ "./src/assets/hero-DEN-2019.png");
 /* harmony import */ var _assets_world1Music_mp3__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../assets/world1Music.mp3 */ "./src/assets/world1Music.mp3");
 /* harmony import */ var _assets_jumpSound_mp3__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../assets/jumpSound.mp3 */ "./src/assets/jumpSound.mp3");
 /* harmony import */ var _assets_footstep_mp3__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../assets/footstep.mp3 */ "./src/assets/footstep.mp3");
@@ -989,7 +990,7 @@ var Game = /*#__PURE__*/function () {
     this.jumpSound.volume = 0.6;
     this.footstep = new Audio('dist/audio/footstep.mp3');
     this.footstep.volume = 0.6;
-    this.worldBGs = ['dist/images/mainpage_bg.png', 'dist/images/world2BG.png'];
+    this.worldBGs = ['dist/images/mainpage_bg.png', 'dist/images/world2BG.png', 'dist/images/hero-DEN-2019.png'];
     this.playerSprite = new Image();
     this.portalFrame = 0;
     this.portalSprite = new Image(); // set exit location
@@ -1948,7 +1949,7 @@ var HomePage = /*#__PURE__*/function () {
     this.currentWorld = 1;
     this.soundMuted = true;
     this.musicMuted = true;
-    this.numWorlds = 2;
+    this.numWorlds = 3;
     this.deathCount = 0;
     this.bestTime = "--:--";
     this.showControls = false;
@@ -1958,7 +1959,7 @@ var HomePage = /*#__PURE__*/function () {
     this.music = new Audio();
     this.music.src = 'dist/audio/world1Music.mp3';
     this.music.volume = 0.6;
-    this.worldBGs = ['dist/images/mainpage_bg.png', 'dist/images/world2BG.png']; // get current number of levels completed
+    this.worldBGs = ['dist/images/mainpage_bg.png', 'dist/images/world2BG.png', 'dist/images/hero-DEN-2019.png']; // get current number of levels completed
 
     this.levelsCompleted = window.localStorage.getItem("levelsCompleted");
 
@@ -3291,7 +3292,479 @@ var LevelData = [// world 1
   }],
   finishPos: [500, 180],
   gravity: -0.1
+}], }], // world 3
+[// world 3 level 1
+{
+  playerStartPos: [100, 300],
+  interactables: [{
+    x: 50,
+    y: 450,
+    height: 20,
+    width: 100,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 20
+  }, {
+    x: 200,
+    y: 400,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 300,
+    y: 350,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 400,
+    y: 300,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 500,
+    y: 250,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 600,
+    y: 200,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 700,
+    y: 150,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 675,
+    y: 450,
+    height: 20,
+    width: 100,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 20
+  }],
+  finishPos: [700, 400],
+  gravity: -0.1,
+  levelText: "Spaceman finds himself in an arid mountain world with stone platforms. Some of the platforms seem quite old..."
+}, // world 3 level 2
+{
+  playerStartPos: [200, 300],
+  interactables: [{
+    x: 100,
+    y: 470,
+    height: 30,
+    width: 700,
+    imgUrl: 'dist/images/world2LargePlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 370,
+    height: 30,
+    width: 700,
+    imgUrl: 'dist/images/world2LargePlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 340,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 310,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 280,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 250,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 220,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 190,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 160,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 130,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 100,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 70,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 100,
+    y: 40,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 435,
+    y: 40,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 435,
+    y: 70,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 400,
+    y: 280,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 30,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 290,
+    y: 280,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 190,
+    y: 280,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 510,
+    y: 280,
+    height: 30,
+    width: 400,
+    imgUrl: 'dist/images/world2MediumPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 435,
+    y: 250,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 435,
+    y: 220,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 400,
+    y: 190,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 30,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 290,
+    y: 190,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 510,
+    y: 190,
+    height: 30,
+    width: 200,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 435,
+    y: 160,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 435,
+    y: 130,
+    height: 30,
+    width: 30,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 400,
+    y: 100,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 30,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 290,
+    y: 100,
+    height: 30,
+    width: 100,
+    imgUrl: 'dist/images/world2TinyPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 510,
+    y: 100,
+    height: 30,
+    width: 400,
+    imgUrl: 'dist/images/world2MediumPlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }, {
+    x: 130,
+    y: 180,
+    height: 30,
+    width: 60,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 30,
+    weak: true,
+    duration: 2000
+  }, {
+    x: 100,
+    y: 10,
+    height: 30,
+    width: 500,
+    imgUrl: 'dist/images/world2LargePlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }],
+  finishPos: [700, 420],
+  gravity: -0.1
+}, // world 3 level 3
+{
+  playerStartPos: [100, 300],
+  interactables: [{
+    x: 80,
+    y: 450,
+    height: 20,
+    width: 100,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 20
+  }, {
+    x: 370,
+    y: 450,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 100
+  }, {
+    x: 600,
+    y: 450,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 100
+  }, {
+    x: 750,
+    y: 350,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 100
+  }, {
+    x: 600,
+    y: 250,
+    height: 20,
+    width: 100,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 20
+  }, {
+    x: 470,
+    y: 200,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 100
+  }, {
+    x: 420,
+    y: 200,
+    height: 20,
+    width: 50,
+    imgUrl: 'dist/images/world2TinyWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 20,
+    weak: true,
+    duration: 100
+  }, {
+    x: 220,
+    y: 250,
+    height: 20,
+    width: 100,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 20
+  }, {
+    x: 0,
+    y: 180,
+    height: 20,
+    width: 100,
+    imgUrl: 'dist/images/world2SmallPlatform.png',
+    yOffset: 0,
+    imgHeight: 20
+  }, {
+    x: 160,
+    y: 70,
+    height: 30,
+    width: 640,
+    imgUrl: 'dist/images/world2LargeWeakPlatform.png',
+    yOffset: 0,
+    imgHeight: 30,
+    weak: true,
+    duration: 0
+  }],
+  finishPos: [600, 20],
+  gravity: -0.1,
+  levelText: 'As you delve deeper into the ruins, the platforms are older and weaker'
+}, {
+  playerStartPos: [100, 200],
+  interactables: [{
+    x: 80,
+    y: 280,
+    height: 30,
+    width: 640,
+    imgUrl: 'dist/images/world2LargePlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }],
+  finishPos: [500, 180],
+  gravity: -0.1
+}, {
+  playerStartPos: [100, 200],
+  interactables: [{
+    x: 80,
+    y: 280,
+    height: 30,
+    width: 640,
+    imgUrl: 'dist/images/world2LargePlatform.png',
+    yOffset: 0,
+    imgHeight: 30
+  }],
+  finishPos: [500, 180],
+  gravity: -0.1
 }]];
+
 
 /***/ }),
 
