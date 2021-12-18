@@ -567,7 +567,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/assets/world2BG.png":
+/***/ "./src/assets/hero-DEN-2019.png":
+/*!*********************************!*\
+  !*** ./src/assets/hero-DEN-2019.png ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("images/hero-DEN-2019.png");
+
+/***/ }),
+  /***/ "./src/assets/world2BG.png":
 /*!*********************************!*\
   !*** ./src/assets/world2BG.png ***!
   \*********************************/
