@@ -8,7 +8,7 @@ export default class HomePage {
         this.currentWorld = 1;
         this.soundMuted = true;
         this.musicMuted = true;
-        this.numWorlds = 3;
+        this.numWorlds = 2;
 
         this.deathCount = 0;
         this.bestTime = "--:--"
