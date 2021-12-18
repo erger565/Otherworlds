@@ -124,7 +124,7 @@ export default class GameMenu {
                 } else if (this.type == "complete") {
                     if (this.selected == 1) {
                         if (this.levelNum == 5) {
-                            if (this.worldNum == 2) { //CHANGE THIS WHEN MAKE MORE WORLDS
+                            if (this.worldNum == 3) { //CHANGE THIS WHEN MAKE MORE WORLDS
                                 
                                 this.renderHome(true);
                                 
